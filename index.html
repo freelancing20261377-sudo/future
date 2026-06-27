@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0F3D2E">
+    <title>Future Space — Architecture & Interior Design Studio</title>
+    <meta name="description"
+        content="Future Space is a premier architecture and interior design studio in India, crafting residential and commercial spaces of exceptional quality and vision.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Preload first canvas frames -->
+    <link rel="preload" href="images/frame_0001.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="images/frame_0002.webp" as="image">
+    <link rel="preload" href="images/frame_0003.webp" as="image">
+</head>
+
+<body>
+
+    <!-- Floating Mobile Book Consultation CTA -->
+    <a href="#contact" class="mobile-float-cta" aria-label="Book Consultation">
+        <span>Book Consultation</span>
+    </a>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-inner">
+            <span class="loader-logo">FS</span>
+            <div class="loader-bar">
+                <div class="loader-fill" id="loader-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="site-header" id="site-header">
+        <a href="#" class="brand-logo">Future<em>Space</em></a>
+        <nav class="nav-links">
+            <a href="#about" class="nav-link">Studio</a>
+            <a href="#showcase" class="nav-link">Services</a>
+            <a href="#projects" class="nav-link">Work</a>
+            <a href="#process" class="nav-link">Process</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="tel:1234567890" class="nav-call">CALL</a>
+            <a href="#contact" class="nav-cta-box">BOOK</a>
+        </div>
+        <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Menu">
+            <span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <span class="mobile-menu-label">Navigation</span>
+        <nav class="mobile-nav">
+            <a href="#about" class="mobile-nav-link"><span class="mobile-nav-num">01</span>About</a>
+            <a href="#projects" class="mobile-nav-link"><span class="mobile-nav-num">02</span>Portfolio</a>
+            <a href="#showcase" class="mobile-nav-link"><span class="mobile-nav-num">03</span>Services</a>
+            <a href="#process" class="mobile-nav-link"><span class="mobile-nav-num">04</span>Process</a>
+            <a href="#insights" class="mobile-nav-link"><span class="mobile-nav-num">05</span>Journal</a>
+            <a href="#contact" class="mobile-nav-link"><span class="mobile-nav-num">06</span>Contact</a>
+        </nav>
+        <div class="mobile-menu-actions">
+            <a href="#contact" class="mobile-nav-cta">Book Consultation</a>
+        </div>
+        <div class="mobile-menu-footer">
+            <div class="mobile-menu-footer-contacts">
+                <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a>
+                <a href="mailto:hello@futurespace.in">hello@futurespace.in</a>
+                <span>Chennai, India</span>
+            </div>
+            <div class="mobile-menu-footer-socials">
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Scroll Sequence -->
+    <div class="scroll-sequence-container" id="hero-sequence">
+        <div class="sticky-wrapper">
+            <canvas id="sequence-canvas"></canvas>
+            <div class="hero-vignette"></div>
+
+            <!-- Phase 1: 0–28% -->
+            <div class="hero-overlay active" id="hero-text-1">
+                <p class="hero-eyebrow">Luxury Interior Design Studio</p>
+                <h1 class="hero-title">
+                    <span class="hero-line"><span>Designing Timeless</span></span>
+                    <span class="hero-line"><span>Spaces for <em class="gold-italic">Modern Living</em></span></span>
+                </h1>
+                <p class="hero-subtitle">Future Space crafts luxury residential and commercial environments through
+                    architecture, interiors, visualization, and BIM-led design solutions.</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-hero-primary"><span>View Projects</span></a>
+                    <a href="#contact" class="btn btn-hero-ghost"><span>Book Consultation</span></a>
+                </div>
+            </div>
+
+            <!-- Phase 2: 30–55% -->
+            <div class="hero-overlay" id="hero-text-2">
+                <p class="hero-eyebrow">Our Philosophy</p>
+                <h2 class="hero-title">
+                    <span class="hero-line"><span>Every Detail,</span></span>
+                    <span class="hero-line"><span><em class="gold-italic">Intentional</em></span></span>
+                </h2>
+                <p class="hero-subtitle">From the first sketch to final styling — we design spaces that feel as
+                    extraordinary as they look.</p>
+            </div>
+
+            <!-- Phase 3: 57–80% -->
+            <div class="hero-overlay" id="hero-text-3">
+                <p class="hero-eyebrow">Residential &amp; Commercial</p>
+                <h2 class="hero-title">
+                    <span class="hero-line"><span>Spaces Built for</span></span>
+                    <span class="hero-line"><span>the Way You <em class="gold-italic">Live</em></span></span>
+                </h2>
+                <p class="hero-subtitle">Bespoke residences, luxury villas, and sophisticated commercial environments
+                    across India.</p>
+            </div>
+
+            <!-- Phase 4: 82–100% -->
+            <div class="hero-overlay" id="hero-text-4">
+                <p class="hero-eyebrow">Begin Your Journey</p>
+                <h2 class="hero-title">
+                    <span class="hero-line"><span>Ready to Create</span></span>
+                    <span class="hero-line"><span>Something <em class="gold-italic">Timeless?</em></span></span>
+                </h2>
+                <p class="hero-subtitle">Schedule a consultation and let us bring your vision to life.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-hero-primary"><span>Begin a Project</span></a>
+                </div>
+            </div>
+
+            <!-- Centered scroll indicator -->
+            <div class="hero-scroll-cue">
+                <span class="hero-scroll-label">Scroll</span>
+                <div class="hero-scroll-line"></div>
+            </div>
+
+            <!-- Marquee strip -->
+            <div class="hero-marquee">
+                <div class="hero-marquee-track">
+                    <span>Bespoke Interiors</span><i>✦</i>
+                    <span>Award Winning</span><i>✦</i>
+                    <span>Turnkey Solutions</span><i>✦</i>
+                    <span>Crafted for Success</span><i>✦</i>
+                    <span>Bespoke Interiors</span><i>✦</i>
+                    <span>Award Winning</span><i>✦</i>
+                    <span>Turnkey Solutions</span><i>✦</i>
+                    <span>Crafted for Success</span><i>✦</i>
+                </div>
+            </div>
+
+            <!-- Permanent watermark cover + loading badge -->
+            <div class="hero-brand-badge" id="hero-loading-badge">
+                <span class="badge-brand">Future<em>Space</em></span>
+                <span class="badge-subtitle">Luxury Interior Studio</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-layout">
+                    <div class="about-label-col">
+                        <span class="section-label reveal-item">01 — Studio</span>
+                        <div class="about-image-accent reveal-item">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=75&fm=webp"
+                                srcset="
+                                    https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=400&q=75&fm=webp 400w,
+                                    https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=75&fm=webp 600w,
+                                    https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=75&fm=webp 900w"
+                                sizes="(max-width: 768px) 100vw, 240px" alt="Studio aesthetic" loading="lazy"
+                                decoding="async">
+                        </div>
+                    </div>
+                    <div class="about-content-col">
+                        <h2 class="section-title about-title reveal-title">About<br><em>Future Space</em></h2>
+                        <p class="lead-text reveal-item">Future Space is an architecture and interior design studio
+                            dedicated to creating refined residential and commercial environments.</p>
+                        <p class="body-text text-muted reveal-item">Through a combination of innovative design thinking,
+                            advanced visualization, and BIM-driven coordination, we deliver spaces that are functional,
+                            timeless, and future-ready.</p>
+                        <div class="about-stats reveal-item">
+                            <div class="about-stat">
+                                <span class="about-stat-num">50<sup>+</sup></span>
+                                <span class="about-stat-label">Design Concepts Developed</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-num">20<sup>+</sup></span>
+                                <span class="about-stat-label">Residential & Commercial Spaces</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-num">100<sup>%</sup></span>
+                                <span class="about-stat-label">Client-Centric Approach</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-num">End-to-End</span>
+                                <span class="about-stat-label">Design Solutions</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-text-link reveal-item">
+                            <span>Discover our story</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header reveal-header">
+                    <span class="section-label">02 — Portfolio</span>
+                    <div class="section-header-row">
+                        <h2 class="section-title reveal-title">Featured<br><em>Projects</em></h2>
+                        <a href="#" class="btn-text-link">
+                            <span>View all work</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="section-subtitle reveal-item">Explore a curated selection of projects showcasing our
+                        approach to architecture, interior design, and spatial innovation.</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- 1. Large card — Mumbai penthouse -->
+                    <div class="project-card project-card--large reveal-item">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=75&fm=webp"
+                                srcset="
+                                    https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=70&fm=webp 600w,
+                                    https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=75&fm=webp 900w,
+                                    https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=75&fm=webp 1200w,
+                                    https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=80&fm=webp 1800w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 60vw"
+                                alt="Sea-View Penthouse, Mumbai" class="project-img lqip" loading="lazy"
+                                decoding="async"
+                                style="background:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=20&q=10&fm=webp') center/cover no-repeat">
+                            <div class="project-overlay">
+                                <span class="project-overlay-cta">View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-meta-left">
+                                <h3 class="project-title">The Worli Penthouse</h3>
+                                <span class="project-location">Mumbai, Maharashtra</span>
+                            </div>
+                            <div class="project-meta-right">
+                                <span class="project-category">Residential</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Bangalore luxury apartment -->
+                    <div class="project-card reveal-item" style="--delay: 0.1s">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=75&fm=webp"
+                                srcset="
+                                    https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=400&q=70&fm=webp 400w,
+                                    https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=75&fm=webp 700w,
+                                    https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=75&fm=webp 900w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                                alt="Whitefield Residence, Bangalore" class="project-img lqip" loading="lazy"
+                                decoding="async"
+                                style="background:url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=20&q=10&fm=webp') center/cover no-repeat">
+                            <div class="project-overlay">
+                                <span class="project-overlay-cta">View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-meta-left">
+                                <h3 class="project-title">Whitefield Residence</h3>
+                                <span class="project-location">Bengaluru, Karnataka</span>
+                            </div>
+                            <div class="project-meta-right">
+                                <span class="project-category">Residential</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Goa coastal villa -->
+                    <div class="project-card reveal-item" style="--delay: 0.2s">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=75&fm=webp"
+                                srcset="
+                                    https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=400&q=70&fm=webp 400w,
+                                    https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&q=75&fm=webp 700w,
+                                    https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=75&fm=webp 900w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                                alt="Candolim Villa, Goa" class="project-img lqip" loading="lazy" decoding="async"
+                                style="background:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=20&q=10&fm=webp') center/cover no-repeat">
+                            <div class="project-overlay">
+                                <span class="project-overlay-cta">View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-meta-left">
+                                <h3 class="project-title">Villa Candolim</h3>
+                                <span class="project-location">Goa</span>
+                            </div>
+                            <div class="project-meta-right">
+                                <span class="project-category">Turnkey Villa</span>
+                                <span class="project-year">2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Wide card — Chennai commercial office -->
+                    <div class="project-card project-card--wide reveal-item" style="--delay: 0.15s">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=75&fm=webp"
+                                srcset="
+                                    https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=70&fm=webp 600w,
+                                    https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=75&fm=webp 900w,
+                                    https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=75&fm=webp 1400w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 70vw"
+                                alt="OMR Tech Campus, Chennai" class="project-img lqip" loading="lazy" decoding="async"
+                                style="background:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=20&q=10&fm=webp') center/cover no-repeat">
+                            <div class="project-overlay">
+                                <span class="project-overlay-cta">View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-meta-left">
+                                <h3 class="project-title">OMR Tech Campus</h3>
+                                <span class="project-location">Chennai, Tamil Nadu</span>
+                            </div>
+                            <div class="project-meta-right">
+                                <span class="project-category">Commercial</span>
+                                <span class="project-year">2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Delhi luxury living room -->
+                    <div class="project-card reveal-item" style="--delay: 0.25s">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=75&fm=webp"
+                                srcset="
+                                    https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=400&q=70&fm=webp 400w,
+                                    https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=75&fm=webp 700w,
+                                    https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=75&fm=webp 900w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                                alt="Defence Colony Bungalow, Delhi" class="project-img lqip" loading="lazy"
+                                decoding="async"
+                                style="background:url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=20&q=10&fm=webp') center/cover no-repeat">
+                            <div class="project-overlay">
+                                <span class="project-overlay-cta">View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-meta-left">
+                                <h3 class="project-title">Defence Colony Bungalow</h3>
+                                <span class="project-location">New Delhi</span>
+                            </div>
+                            <div class="project-meta-right">
+                                <span class="project-category">Residential</span>
+                                <span class="project-year">2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Hyderabad modular kitchen + living -->
+                    <div class="project-card reveal-item" style="--delay: 0.3s">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=900&q=75&fm=webp"
+                                srcset="
+                                    https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=400&q=70&fm=webp 400w,
+                                    https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=700&q=75&fm=webp 700w,
+                                    https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=900&q=75&fm=webp 900w"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                                alt="Jubilee Hills Kitchen, Hyderabad" class="project-img lqip" loading="lazy"
+                                decoding="async"
+                                style="background:url('https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=20&q=10&fm=webp') center/cover no-repeat">
+                            <div class="project-overlay">
+                                <span class="project-overlay-cta">View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-meta">
+                            <div class="project-meta-left">
+                                <h3 class="project-title">Jubilee Hills Kitchen</h3>
+                                <span class="project-location">Hyderabad, Telangana</span>
+                            </div>
+                            <div class="project-meta-right">
+                                <span class="project-category">Modular Kitchen</span>
+                                <span class="project-year">2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <main class="main-content">
+
+        <!-- Process Section -->
+        <section id="process" class="section process-section">
+            <div class="container">
+                <div class="process-layout">
+                    <div class="process-header-col">
+                        <span class="section-label reveal-item">03 — Methodology</span>
+                        <h2 class="section-title process-title reveal-title">Our Design<br><em>Journey</em></h2>
+                        <p class="body-text text-muted reveal-item">Every project begins with listening. We craft each
+                            space through a rigorous, deeply personal process — from first conversation to final
+                            curation.</p>
+                    </div>
+                    <div class="timeline-container">
+                        <div class="timeline-step reveal-item">
+                            <div class="step-number">01</div>
+                            <div class="step-content">
+                                <h3>Discovery</h3>
+                                <p>An exhaustive exploration of your lifestyle, aesthetic aspirations, and spatial
+                                    requirements.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step reveal-item" style="--delay: 0.08s">
+                            <div class="step-number">02</div>
+                            <div class="step-content">
+                                <h3>Concept Development</h3>
+                                <p>Formulating spatial narratives through mood boards, material palettes, and initial
+                                    space planning configurations.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step reveal-item" style="--delay: 0.16s">
+                            <div class="step-number">03</div>
+                            <div class="step-content">
+                                <h3>Design Direction</h3>
+                                <p>Refining concepts into definitive directions with detailed spatial plans, elevations,
+                                    and 3D visualizations.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step reveal-item" style="--delay: 0.24s">
+                            <div class="step-number">04</div>
+                            <div class="step-content">
+                                <h3>Documentation</h3>
+                                <p>Comprehensive technical drawings, specifications, and procurement schedules for
+                                    flawless execution.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step reveal-item" style="--delay: 0.32s">
+                            <div class="step-number">05</div>
+                            <div class="step-content">
+                                <h3>Execution</h3>
+                                <p>Rigorous project management, artisan coordination, and turn-key construction
+                                    supervision to bring visions to life.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-step reveal-item" style="--delay: 0.40s">
+                            <div class="step-number">06</div>
+                            <div class="step-content">
+                                <h3>Styling</h3>
+                                <p>Final curation of furnishings, art, and accessories to complete the narrative and
+                                    elevate every detail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="showcase" class="section services-section">
+            <div class="container">
+                <div class="section-header reveal-header">
+                    <span class="section-label">04 — Services</span>
+                    <h2 class="section-title reveal-title">Our<br><em>Expertise</em></h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-item reveal-item">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80"
+                                alt="Interior Architecture" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <span class="service-num">01</span>
+                            <h3 class="service-title">Architecture Design</h3>
+                            <p>Thoughtfully planned residential and commercial architecture tailored to functionality,
+                                aesthetics, and long-term value.</p>
+                            <a href="#contact" class="service-link">
+                                <span>Enquire</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-item reveal-item" style="--delay: 0.08s">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80"
+                                alt="Luxury Residential Design" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <span class="service-num">02</span>
+                            <h3 class="service-title">Interior Design</h3>
+                            <p>Bespoke interior environments that balance elegance, comfort, and modern living.</p>
+                            <a href="#contact" class="service-link">
+                                <span>Enquire</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-item reveal-item" style="--delay: 0.16s">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80"
+                                alt="Commercial Design" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <span class="service-num">03</span>
+                            <h3 class="service-title">3D Visualization</h3>
+                            <p>Photorealistic renders and immersive walkthroughs that bring concepts to life before
+                                execution.</p>
+                            <a href="#contact" class="service-link">
+                                <span>Enquire</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service-item reveal-item" style="--delay: 0.24s">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80"
+                                alt="Furniture Curation" loading="lazy">
+                        </div>
+                        <div class="service-content">
+                            <span class="service-num">04</span>
+                            <h3 class="service-title">BIM Coordination</h3>
+                            <p>Advanced BIM-based collaboration ensuring accuracy, efficiency, and seamless project
+                                delivery.</p>
+                            <a href="#contact" class="service-link">
+                                <span>Enquire</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section testimonials-section">
+            <div class="container">
+                <div class="testimonials-header reveal-header">
+                    <span class="section-label">05 — Client Words</span>
+                    <h2 class="section-title reveal-title">What Our<br><em>Clients Say</em></h2>
+                </div>
+                <div class="testimonials-track">
+                    <div class="testimonial-feature reveal-item">
+                        <div class="testimonial-quote-mark">"</div>
+                        <blockquote class="testimonial-body">
+                            Future Space transformed our residence into something beyond what we imagined. Every
+                            material choice, every spatial decision felt intentional and deeply considered.
+                        </blockquote>
+                        <div class="testimonial-attribution">
+                            <div class="testimonial-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80"
+                                    alt="Elena R." loading="lazy">
+                            </div>
+                            <div>
+                                <span class="testimonial-name">Elena R.</span>
+                                <span class="testimonial-location">Bangalore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-feature reveal-item" style="--delay: 0.15s">
+                        <div class="testimonial-quote-mark">"</div>
+                        <blockquote class="testimonial-body">
+                            Their attention to light, proportion, and texture is unmatched. Working with them felt less
+                            like a renovation and more like collaborating on a work of art.
+                        </blockquote>
+                        <div class="testimonial-attribution">
+                            <div class="testimonial-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80"
+                                    alt="Jonathan M." loading="lazy">
+                            </div>
+                            <div>
+                                <span class="testimonial-name">Jonathan M.</span>
+                                <span class="testimonial-location">Mumbai</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-feature reveal-item" style="--delay: 0.3s">
+                        <div class="testimonial-quote-mark">"</div>
+                        <blockquote class="testimonial-body">
+                            The team understood our vision immediately. The result is a space that feels both timeless
+                            and unmistakably ours.
+                        </blockquote>
+                        <div class="testimonial-attribution">
+                            <div class="testimonial-avatar">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80"
+                                    alt="Priya S." loading="lazy">
+                            </div>
+                            <div>
+                                <span class="testimonial-name">Priya S.</span>
+                                <span class="testimonial-location">Chennai</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section id="insights" class="section insights-section">
+            <div class="container">
+                <div class="section-header reveal-header">
+                    <span class="section-label">06 — Journal</span>
+                    <div class="section-header-row">
+                        <h2 class="section-title reveal-title">Design<br><em>Perspectives</em></h2>
+                        <a href="#" class="btn-text-link">
+                            <span>All articles</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" stroke-width="1.2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="section-subtitle reveal-item">Insights, trends, and perspectives from the world of
+                        architecture, interiors, and design innovation.</p>
+                </div>
+                <div class="insights-grid">
+                    <article class="insight-card insight-card--featured reveal-item">
+                        <div class="insight-image">
+                            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=900&q=80"
+                                alt="Architectural Trends" loading="lazy">
+                        </div>
+                        <div class="insight-content">
+                            <span class="insight-tag">Architecture</span>
+                            <h3 class="insight-title">Innovative Architectural Trends for Modern Living Spaces</h3>
+                            <p class="insight-excerpt">In the ever-evolving world of architecture, the way we design our
+                                living spaces is undergoing a remarkable transformation.</p>
+                            <div class="insight-meta">
+                                <span class="insight-author">Mohammed Jazim</span>
+                                <span class="insight-date">May 2025</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="insight-card reveal-item" style="--delay: 0.12s">
+                        <div class="insight-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=80"
+                                alt="Small Home Tips" loading="lazy">
+                        </div>
+                        <div class="insight-content">
+                            <span class="insight-tag">Interior Design</span>
+                            <h3 class="insight-title">Maximizing Space: Design Tips for Small Homes</h3>
+                            <p class="insight-excerpt">With the right interior design strategies, you can maximize every
+                                square foot and create a sense of expansive elegance.</p>
+                            <div class="insight-meta">
+                                <span class="insight-author">Mohammed Jazim</span>
+                                <span class="insight-date">Apr 2025</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="insight-card reveal-item" style="--delay: 0.24s">
+                        <div class="insight-image">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80"
+                                alt="Commercial Design" loading="lazy">
+                        </div>
+                        <div class="insight-content">
+                            <span class="insight-tag">Commercial</span>
+                            <h3 class="insight-title">Future-Ready Commercial Design: Functionality &amp; Style</h3>
+                            <p class="insight-excerpt">Spaces must reflect a balance of functionality and style as
+                                businesses adapt to evolving consumer behaviors.</p>
+                            <div class="insight-meta">
+                                <span class="insight-author">Mohammed Jazim</span>
+                                <span class="insight-date">Mar 2025</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Consultation Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-info">
+                        <span class="section-label reveal-item">07 — Begin</span>
+                        <h2 class="contact-title reveal-title">Let's Create Something<br><em>Exceptional</em></h2>
+                        <p class="body-text text-muted reveal-item">Whether you're planning a residence, commercial
+                            space, renovation, or visualization project, we'd love to hear about your vision.</p>
+                        <div class="contact-trust reveal-item">
+                            <span>Residential Design</span> <span class="trust-divider">•</span>
+                            <span>Commercial Design</span> <span class="trust-divider">•</span>
+                            <span>Interior Design</span> <span class="trust-divider">•</span>
+                            <span>Visualization</span>
+                        </div>
+                        <div class="contact-checklist reveal-item">
+                            <span class="contact-check-item">✓ Response Within 24 Hours</span>
+                            <span class="contact-check-item">✓ Online &amp; On-Site Consultation</span>
+                            <span class="contact-check-item">✓ Projects Across India</span>
+                        </div>
+                        <div class="contact-details reveal-item">
+                            <div class="contact-detail-item">
+                                <span class="contact-detail-label">Phone</span>
+                                <a href="tel:+91XXXXXXXXXX" class="contact-detail-value">+91 XXXXX XXXXX</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="contact-detail-label">Email</span>
+                                <a href="mailto:hello@futurespace.in"
+                                    class="contact-detail-value">hello@futurespace.in</a>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="contact-detail-label">Location</span>
+                                <span class="contact-detail-value">Chennai, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper reveal-item">
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cf-name">Full Name</label>
+                                    <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cf-email">Email Address</label>
+                                    <input type="email" id="cf-email" name="email" placeholder="your@email.com"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cf-phone">Phone Number</label>
+                                    <input type="tel" id="cf-phone" name="phone" placeholder="+91 00000 00000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cf-location">Location</label>
+                                    <input type="text" id="cf-location" name="location" placeholder="City, State">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-project">Project Type</label>
+                                <input type="text" id="cf-project" name="project"
+                                    placeholder="Residential / Commercial / Visualization">
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-budget">Project Investment</label>
+                                <select id="cf-budget" name="budget" required>
+                                    <option value="">Select investment range</option>
+                                    <option value="10L-25L">₹10L – ₹25L</option>
+                                    <option value="25L-50L">₹25L – ₹50L</option>
+                                    <option value="50L-1Cr">₹50L – ₹1Cr</option>
+                                    <option value="1Cr+">₹1Cr+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-message">Project Description</label>
+                                <textarea id="cf-message" name="message" rows="4"
+                                    placeholder="Describe your space, aspirations, and timeline..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-form-submit">
+                                <span class="btn-submit-text">Schedule Design Consultation</span>
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <div class="form-success" id="form-success">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 13l4 4L19 7" stroke="#B89B65" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <span>Your request has been received. We'll be in touch within 48 hours.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-top-bar">
+            <div class="container footer-top-inner">
+                <span class="footer-logo">Future Space — Architecture &amp; Interior Design Studio</span>
+                <p class="footer-tagline">Architecture &amp; Interior Design Studio — India</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram" class="social-link">Instagram</a>
+                    <a href="#" aria-label="Facebook" class="social-link">Facebook</a>
+                    <a href="#" aria-label="X / Twitter" class="social-link">X</a>
+                    <a href="#" aria-label="Pinterest" class="social-link">Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-body">
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h4 class="footer-col-label">Studio</h4>
+                    <a href="#about">About</a>
+                    <a href="#projects">Portfolio</a>
+                    <a href="#process">Process</a>
+                    <a href="#insights">Journal</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-label">Services</h4>
+                    <a href="#showcase">Residential</a>
+                    <a href="#showcase">Commercial</a>
+                    <a href="#showcase">3D Visualization</a>
+                    <a href="#showcase">BIM Coordination</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-label">Contact</h4>
+                    <a href="tel:1234567890">123-456-7890</a>
+                    <a href="mailto:info@mysite.com">info@mysite.com</a>
+                    <span>India</span>
+                </div>
+                <div class="footer-col footer-col--newsletter">
+                    <h4 class="footer-col-label">Stay Connected</h4>
+                    <p>Design perspectives, project reveals, and studio news.</p>
+                    <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                        <div class="newsletter-input-group">
+                            <input type="email" placeholder="your@email.com" required>
+                            <button type="submit" aria-label="Subscribe">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                    <path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p class="footer-copy">&copy; 2025 Future Space Studio. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </main>
+    <!-- Sticky Mobile Consultation CTA -->
+    <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+        <a href="#contact">
+            <span>Book Free Consultation</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
