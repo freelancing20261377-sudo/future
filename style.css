@@ -447,7 +447,7 @@ a { text-decoration: none; }
    ========================================================================== */
 .site-header {
     position: fixed;
-    top: 45px;
+    top: 22px;
     left: 0;
     right: 0;
     width: 100%;
@@ -456,7 +456,7 @@ a { text-decoration: none; }
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 0 clamp(2.5rem, 6vw, 5rem);
+    padding: 0 clamp(2rem, 5vw, 4rem);
     z-index: 1000;
     background: none;
     border-radius: 0;
@@ -2459,7 +2459,7 @@ a { text-decoration: none; }
 
     /* Nav */
     .site-header {
-        top: 30px;
+        top: 20px;
         width: 100%;
         padding: 0 2rem;
     }
