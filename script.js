@@ -84,7 +84,8 @@ let vpW = window.innerWidth;
 let vpH = window.innerHeight;
 
 const scaleDPI = (canvas, ctx) => {
-    const dpr = window.devicePixelRatio || 1;
+    const rawDpr = window.devicePixelRatio || 1;
+    const dpr = isMobileDevice ? Math.min(rawDpr, 1.5) : rawDpr;
     canvas.width  = vpW * dpr;
     canvas.height = vpH * dpr;
     ctx.scale(dpr, dpr);
@@ -161,7 +162,7 @@ const nearestLoaded = (arr, idx, total) => {
 // user is about to see is always downloaded before frames far from view.
 const loadQueue = new Set();
 let activeLoads = 0;
-const MAX_CONCURRENT = isMobileDevice ? 6 : 8;
+const MAX_CONCURRENT = isMobileDevice ? 10 : 8;
 
 const queueFrame = (i) => {
     if (i < 0 || i >= TOTAL_FRAMES_HERO) return;
@@ -194,7 +195,7 @@ const processQueue = () => {
 };
 
 const ensureNearbyFramesQueued = () => {
-    const radius = isMobileDevice ? 15 : 10;
+    const radius = isMobileDevice ? 20 : 10;
     for (let d = 0; d <= radius; d++) {
         queueFrame(tgt1 + d);
         queueFrame(tgt1 - d);

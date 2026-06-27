@@ -2765,20 +2765,8 @@ a { text-decoration: none; }
         pointer-events: auto !important;
     }
 
-    /* Invisible atmospheric radial fog — no card, no border, just ambient depth */
     .hero-overlay::before {
-        content: '';
-        position: absolute;
-        inset: -40px -60px;
-        background: radial-gradient(
-            ellipse 90% 80% at 50% 55%,
-            rgba(6, 4, 2, 0.30) 0%,
-            rgba(6, 4, 2, 0.18) 40%,
-            transparent 70%
-        );
-        border-radius: 50%;
-        z-index: -1;
-        pointer-events: none;
+        display: none;
     }
 
     /* Eyebrow — tiny whisper label, muted white, maximum spacing */
